@@ -10,9 +10,17 @@ import org.junit.jupiter.api.Assertions;
 public class MoodAnalyserTest {
     @Test
     public void testMood_WhenMoodIsSad() throws MoodAnalysisException {
-        MoodAnalyzer moodAnalyzer = new MoodAnalyzer("I am Sad Mood");
+        MoodAnalyzer moodAnalyzer = new MoodAnalyzer("I am in Sad Mood");
         String state = moodAnalyzer.analyseMood();
         String actual = "SAD";
         Assertions.assertEquals(actual, state);
+    }
+
+    @Test
+    public void testMood_WhenMoodIsSad1() throws MoodAnalysisException {
+        MoodAnalyzer moodAnalyzer = new MoodAnalyzer("I am in Any Mood");
+        String state = moodAnalyzer.analyseMood();
+        String actual = "HAPPY";
+        Assertions.assertEquals(state, actual);
     }
 }
