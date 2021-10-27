@@ -25,7 +25,7 @@ class MoodAnalysisException extends Throwable {
     public ExceptionType exceptionType;
 
     enum ExceptionType {
-        EXCEPTION_NULL, EXCEPTION_EMPTY
+        EXCEPTION_NULL, ENTERED_EMPTY, ENTERED_NULL, EXCEPTION_EMPTY
     }
 
     public MoodAnalysisException(String message, ExceptionType type) {
