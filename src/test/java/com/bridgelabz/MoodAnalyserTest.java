@@ -1,20 +1,18 @@
 package com.bridgelabz;
 
-import static org.junit.Assert.assertTrue;
-
 import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+
 
 /**
  * Unit test for simple MoodAnalyzer.
  */
-public class AppTest 
-{
-    /**
-     * Rigorous Test :-)
-     */
+public class MoodAnalyserTest {
     @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
+    public void testMood_WhenMoodIsSad() throws MoodAnalysisException {
+        MoodAnalyzer moodAnalyzer = new MoodAnalyzer("I am Sad Mood");
+        String state = moodAnalyzer.analyseMood();
+        String actual = "SAD";
+        Assertions.assertEquals(actual, state);
     }
 }
